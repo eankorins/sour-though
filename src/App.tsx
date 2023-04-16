@@ -16,13 +16,17 @@ const App: Component = () => {
   return (
     <div class="bg-slate-900 h-screen w-screen text-stone-400">
       <div class="flex items-center justify-center h-screen">
-        <select onChange={(e) => selectionChanged(e)}>
-          <For each={ recipes }>{(recipe, idx) => 
-            <option>{recipe.name}</option>
-          }            
-          </For>
-        </select>
-        <Calculator recipe={selectedRecipe}></Calculator>
+        <div>
+          <select
+           class="w-96 justify-center"
+           onChange={(e) => selectionChanged(e)}>
+            <For each={ recipes }>{(recipe, idx) => 
+              <option>{recipe.name}</option>
+            }            
+            </For>
+          </select>
+          <Calculator recipe={selectedRecipe}></Calculator>
+        </div>
       </div>
     </div>
   );
