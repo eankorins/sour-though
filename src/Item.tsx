@@ -7,8 +7,8 @@ const ItemC: Component<{item: Item}> = (props) => {
   const [item, setItem] = createStore(props.item);
 
   return (
-    <div class="w-250">
-      <div class='grid grid-cols-4 gap-2 p-2'>
+    <div class="w-auto">
+      <div class='grid grid-cols-3 gap-2 p-2'>
         <div>{item.name}</div>
         <div class="flex gap-2">
           <input 
