@@ -24,7 +24,11 @@ const Calculator: Component<{recipe: Recipe}> = (props) => {
 
   return (
     <div>
-      <div class='grid grid-cols-4 gap-2 p-2'>
+      <For each={ recipe.items }>{(item, i) => 
+        <ItemC item={item} />
+      }
+      </For>
+      <div class='grid grid-cols-3 gap-2 p-2'>
         <h1>Units</h1>
         <input 
           class="w-16 text-slate-950"
@@ -36,10 +40,6 @@ const Calculator: Component<{recipe: Recipe}> = (props) => {
           { unitWeight() }g unit
         </div>
       </div>
-      <For each={ recipe.items }>{(item, i) => 
-        <ItemC item={item} />
-      }
-      </For>
     </div>
   );
 };

@@ -7,9 +7,9 @@ export type Item = {
 
 
 export type Recipe = {
-  name?: string,
-  units?: number,
-  items?: Item[]
+  name: string,
+  units: number,
+  items: Item[]
 }
 
 const basic: Recipe = {
