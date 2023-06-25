@@ -4,7 +4,7 @@ import { Recipe, recipes } from './model';
 import { createStore } from 'solid-js/store';
 
 const App: Component = () => {
-  const [selectedRecipe, setSelectedRecipe] = createStore<Recipe>({items: [], name:"NA", units:1});
+  const [selectedRecipe, setSelectedRecipe] = createStore<Recipe>({items: [], steps: [], name:"NA", units:1});
   setSelectedRecipe(recipes[0])
 
   function selectionChanged(e: Event & {
